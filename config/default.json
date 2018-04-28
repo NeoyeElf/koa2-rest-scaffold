@@ -1,0 +1,15 @@
+{
+  "application": {
+    "port": 7100
+  },
+  "mongo": {
+    "uri": "mongodb://localhost:27017/test",
+    "user": "",
+    "password": ""
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "password": ""
+  }
+}

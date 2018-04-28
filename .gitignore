@@ -1,0 +1,13 @@
+# Dependency directory
+node_modules
+
+# Build directory
+app
+
+# IDEA
+.idea
+.vscode
+package-lock.json
+
+# API DOCS
+apidoc
