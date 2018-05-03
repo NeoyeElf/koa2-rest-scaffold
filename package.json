@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon src/index.js",
     "start": "NODE_ENV=development node src/index.js",
+    "pro": "NODE_ENV=production node app/index.js",
     "build": "npm run test && npm run clean && npm run compile",
     "compile": "babel src/ --out-dir app/ --retain-lines",
     "clean": "rm -rf app/",

@@ -12,6 +12,20 @@
 - 运行 `npm run build` 会将项目编译至 app 目录下
 - 运行 `npm run test` 会执行 test 目录下的测试用例
 
+#### 生产环境运行
+- node
+
+首先编译：`npm run build`，然后运行`npm run pro`即可
+
+- pm2
+
+首先编译：`npm run build`，然后运行`pm2 start pm2.json`即可（若没安装pm2则需要先安装`npm install pm2@latest -g`）。pm2.json根据项目需要自行修改。
+
+- docker
+
+运行`./docker-build.sh`生成 docker 镜像，接着运行 `docker run --name koa2-rest-scaffold -d -p 8000:7100 koa2-rest-scaffold:latest`即可
+其中，`docker run` 中的 `name` 和 `-p` 映射出来的端口都可以修改。也可以将镜像 push 到 docker 仓库在服务器上先 pull 拉取镜像再 run。
+
 ### 开发使用说明
 
 #### 配置项
@@ -68,7 +82,7 @@ import {
 } from '../lib/redis'
 
 const getRedisData = async () => {
-  await redis.set('a', 1)
+  return await redis.set('a', 1)
 }
 ```
 
@@ -104,4 +118,4 @@ tips: _如果 mongo schema 需要实现继承关系，则可以使用 [mongoose-
 ### 接下来要做的
 
 - [x] 开发模式下，热更新模式
-- [ ] docker build
+- [x] docker build

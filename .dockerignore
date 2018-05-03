@@ -1,0 +1,11 @@
+node_modules/
+.git/
+.*
+src/
+test/
+apidoc/
+README.md
+package-lock.json
+apidoc.json
+docker-build.sh
+logs/

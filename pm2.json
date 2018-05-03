@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "koa2-rest-scaffold",
+      "script": "./app/index.js",
+      "watch": false,
+      "exec_interpreter": "node",
+      "exec_mode": "cluster",
+      "instances":     2,
+      "error_file": "logs/err.log",
+      "out_file": "logs/out.log",
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss"
+    }
+  ]
+}
