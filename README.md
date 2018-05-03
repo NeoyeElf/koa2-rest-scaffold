@@ -8,7 +8,7 @@
 
 ### 项目运行
 
-- 直接运行 `npm start` 便可启动项目，访问 localhost:7100/api/hello，若看到数据正常返回则说明启动成功
+- 直接运行 `npm start` 便可启动项目，访问 localhost:7100/api/hello，若看到数据正常返回则说明启动成功；若需要**热更新**，则运行`npm run dev`
 - 运行 `npm run build` 会将项目编译至 app 目录下
 - 运行 `npm run test` 会执行 test 目录下的测试用例
 
@@ -103,5 +103,5 @@ tips: _如果 mongo schema 需要实现继承关系，则可以使用 [mongoose-
 
 ### 接下来要做的
 
-- 开发模式下，热启动
-- docker build
+- [x] 开发模式下，热更新模式
+- [ ] docker build
