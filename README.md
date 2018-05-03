@@ -26,6 +26,8 @@
 运行`./docker-build.sh`生成 docker 镜像，接着运行 `docker run --name koa2-rest-scaffold -d -p 8000:7100 koa2-rest-scaffold:latest`即可
 其中，`docker run` 中的 `name` 和 `-p` 映射出来的端口都可以修改。也可以将镜像 push 到 docker 仓库在服务器上先 pull 拉取镜像再 run。
 
+_tips: `docker run` 时可以通过 `-v somePath/production.json:/app/config/production.json` 将config/production.json挂载出来，配置项和代码分离，防止敏感信息提交到代码库。logs等文件夹也应该挂载出来，保持干净的container。_
+
 ### 开发使用说明
 
 #### 配置项
