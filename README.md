@@ -1,7 +1,7 @@
 ## koa2 Restful API 脚手架
 
 本项目旨在提供一个纯Restful API server脚手架。
-本项目引入了一些koa2&node的常用库，包含路由、参数校验、单元测试、业务逻辑异常处理等特性
+本项目引入了一些koa2&node的常用库，集成了redis和mongo，包含路由、参数校验、单元测试、业务逻辑异常处理等特性
 
 项目的由来：本人之前用Java写后台，习惯了throw Exception。使用node koa框架，也找了些网上的koa2脚手架，发现并没有
 一个项目能提供优雅的异常处理，故产生了此项目⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
@@ -24,7 +24,8 @@
 - docker
 
 运行`./docker-build.sh`生成 docker 镜像，接着运行 `docker run --name koa2-rest-scaffold -d -p 8000:7100 koa2-rest-scaffold:latest`即可
-其中，`docker run` 中的 `name` 和 `-p` 映射出来的端口都可以修改。也可以将镜像 push 到 docker 仓库在服务器上先 pull 拉取镜像再 run。
+
+其中，`docker run` 中的 `name` 和 `-p` 映射出来的端口都可以按需修改。也可以将镜像 push 到 docker 仓库在服务器上先 pull 拉取镜像再 run。
 
 _tips: `docker run` 时可以通过 `-v somePath/production.json:/app/config/production.json` 将config/production.json挂载出来，配置项和代码分离，防止敏感信息提交到代码库。logs等文件夹也应该挂载出来，保持干净的container。_
 
