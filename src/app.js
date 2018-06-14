@@ -35,6 +35,7 @@ app.use((ctx, next) => {
       code = res.code
       msg = res.msg
     } else {
+      ctx.status = code
       console.error('err', err)
     }
     ctx.body = format({}, code, msg)
