@@ -45,14 +45,6 @@ app.use((ctx, next) => {
 // check request param
 require('koa-validate')(app)
 
-// logger
-app.use(async (ctx, next) => {
-  const start = new Date()
-  await next()
-  const ms = new Date() - start
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
-})
-
 app.use(async (ctx, next) => {
   await next()
   ctx.body = format(ctx.body)
